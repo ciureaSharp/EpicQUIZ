@@ -23,7 +23,7 @@
     <link href="<?php echo ASSETS; ?>plugins/bower_components/owl.carousel/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo ASSETS; ?>plugins/bower_components/owl.carousel/owl.theme.default.css" rel="stylesheet" type="text/css"/>
     <!-- animation CSS -->
-    <link href="<?php echo ASSETS; ?>css/animate.css" rel="stylesheet">
+    <link href="<?php echo ASSETS; ?>landing/css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="<?php echo ASSETS; ?>landing/css/style.css" rel="stylesheet">
 
