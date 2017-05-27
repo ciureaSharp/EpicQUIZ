@@ -41,7 +41,8 @@
                             </div>
                             <div class="form-group m-b-0">
                                 <div class="col-sm-offset-3 col-sm-9 text-right">
-                                    <button type="submit" class="btn btn-info waves-effect waves-light m-t-10" id="signin">Sign in
+                                    <button type="submit" class="btn btn-info waves-effect waves-light m-t-10"
+                                            id="signin">Sign in
                                     </button>
                                 </div>
                             </div>
@@ -78,6 +79,8 @@
                                     <div class="input-group-addon"><i class="ti-user"></i></div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="form-group">
                             <label for="nume" class="col-sm-3 control-label">Nume*</label>
                             <div class="col-sm-9">
                                 <div class="input-group">
@@ -119,7 +122,8 @@
                         </div>
                         <div class="form-group m-b-0">
                             <div class="col-sm-offset-3 col-sm-9 text-right">
-                                <button type="submit" class="btn btn-info waves-effect waves-light m-t-10" id="creaza_cont">Creeaza cont
+                                <button type="submit" class="btn btn-info waves-effect waves-light m-t-10"
+                                        id="creaza_cont">Creeaza cont
                                 </button>
                             </div>
                         </div>
@@ -216,7 +220,7 @@
 
 <script>
     $(document).ready(function () {
-        $("#register_link").click(function(e){
+        $("#register_link").click(function (e) {
             e.preventDefault();
             $("#Login_modal").modal("hide");
             $("#Register_modal").modal("show");
