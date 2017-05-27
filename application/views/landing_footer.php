@@ -227,7 +227,7 @@
             $("#Login_modal").modal("hide");
             $("#Register_modal").modal("show");
         });
-        $("#register_email").input(function () {
+        $("#register_email").on('input', function () {
             var regemail = $(this).val();
             if (!isEmail(regemail)) {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
