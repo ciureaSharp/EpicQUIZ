@@ -120,6 +120,7 @@
                                 </div>
                             </div>
                         </div>
+                        <p class="alert alert-danger hidden" id="form_errors"></p>
                         <div class="form-group m-b-0">
                             <div class="col-sm-offset-3 col-sm-9 text-right">
                                 <button type="submit" class="btn btn-info waves-effect waves-light m-t-10"
@@ -228,8 +229,8 @@
         });
         $("#register_email").change(function () {
             var regemail = $(this).val();
-            if (!isEmail(regemail)){
-                $(this).css({'background-color' : 'rgba(255, 0, 0, 0.5)'});
+            if (!isEmail(regemail)) {
+                $(this).css({'background-color': 'rgba(255, 0, 0, 0.5)'});
             }
         });
         function isEmail(email) {
@@ -237,15 +238,15 @@
             return regex.test(email);
         }
 
-        $("#register_reparola").change(function(e){
+        $("#register_reparola").change(function (e) {
             var parola = $("#register_parola").text();
             var reparola = $(this).val();
-            if(!parola){
-                swal(
-                    'Oops...',
-                    'Nu ai introdus parola!!',
-                    'error'
-                )
+            if (parola == '') {
+                $("#register_parola").css({'background-color': 'rgba(255, 0, 0, 0.5)'});
+            } else if (parola !== reparola) {
+                $(this).css({'background-color': 'rgba(255, 0, 0, 0.5)'});
+                $('#form_errors').text('Parolele nu coincid!');
+                $('#form_errors').removeClass('hidden');
             }
         });
 
