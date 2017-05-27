@@ -86,5 +86,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 
 #--- Assets Path ---
-define('WORKING_FOLDER', '/P2380s8T25Gp19t/application');
-define('ASSETS', 'https://'.$_SERVER["HTTP_HOST"].WORKING_FOLDER.'/assets/');
+define('ASSETS', 'https://'.$_SERVER["HTTP_HOST"].'/P2380s8T25Gp19t/assets/');
