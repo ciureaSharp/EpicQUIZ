@@ -216,6 +216,7 @@
 <script src="<?php echo ASSETS; ?>bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- jQuery for carousel -->
 <script src="<?php echo ASSETS; ?>plugins/bower_components/owl.carousel/owl.carousel.min.js"></script>
+<script src="<?php echo ASSETS; ?>plugins/bower_components/sweetalert/sweetalert.min.js"></script>
 <script src="<?php echo ASSETS; ?>landing/js/custom.js"></script>
 
 <script>
