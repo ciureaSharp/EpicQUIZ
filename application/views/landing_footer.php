@@ -273,7 +273,7 @@
                         nume: nume,
                         email: email,
                         pass: pass
-                    }
+                    },
                     success: function (data) {
                         alert(data);
                     }
