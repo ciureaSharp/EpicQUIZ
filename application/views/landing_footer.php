@@ -235,14 +235,14 @@
             }
         });
 
-        $("#nume").change(function () {
+        $("#nume").focusout(function () {
             var nume = $(this).val();
             if (!nume == '') {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').text('Numele este obligatoriu!!').removeClass('hidden');
             }
         });
-        $("#prenume").change(function () {
+        $("#prenume").focusout(function () {
             var prenume = $(this).val();
             if (!prenume == '') {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
