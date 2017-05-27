@@ -15,8 +15,8 @@
                 <h4 class="modal-title" id="Login_modalLabel1">Bine ai venit!</h4>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <form class="form-horizontal">
+                <form class="form-horizontal">
+                    <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
                                 <label for="exampleInputEmail1" class="col-sm-3 control-label">Email*</label>
@@ -49,8 +49,8 @@
                                 </div>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
