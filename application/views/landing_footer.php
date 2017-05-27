@@ -265,13 +265,19 @@
             }
             if ($('#form_errors').hasClass('hidden')) {
                 alert('<?php echo base_url()?>');
-//                $.ajax({
-//                    url: "<?php //echo base_url()?>//admin/admin-sms/" + number + "/" + body,
-//                    type: "POST",
-//                    success: function (data) {
-//                        alert(data);
-//                    }
-//                });
+                $.ajax({
+                    url: "<?php echo base_url()?>register,
+                    type: "POST",
+                    data: {
+                        prenume: prenume,
+                        nume: nume,
+                        email: email,
+                        pass: pass
+                    }
+                    success: function (data) {
+                        alert(data);
+                    }
+                });
             }
         });
 

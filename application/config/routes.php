@@ -63,6 +63,9 @@ $route['git'] = 'git';
 $route['home'] = 'pages/landing';
 
 
+#-- LOGIN/LOGOUT/REGISTER
+
+$route['register']['post'] = 'users/register';
 
 
 
