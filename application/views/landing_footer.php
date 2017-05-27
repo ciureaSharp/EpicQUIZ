@@ -266,7 +266,7 @@
             if ($('#form_errors').hasClass('hidden')) {
                 alert('<?php echo base_url()?>');
                 $.ajax({
-                    url: "<?php echo base_url()?>register,
+                    url: "<?php echo base_url()?>register",
                     type: "POST",
                     data: {
                         prenume: prenume,
