@@ -229,11 +229,12 @@
         });
         $("#creeaza_cont").click(function (e) {
             e.preventDefault();
-            var nume = $('#nume').val();
-            var prenume = $('#prenume').val();
+            var nume = $('#nume').text();
+            var prenume = $('#prenume').text();
             var email = $('#register_email').val();
             var pass = $('#register_parola').val();
             var repass = $('#register_reparola').val();
+            alert(nume);
             if (nume.length === 0) {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').html('Numele este obligatoriu!').removeClass('hidden');
