@@ -225,8 +225,21 @@
             $("#Login_modal").modal("hide");
             $("#Register_modal").modal("show");
         });
+
+        $("#register_reparola").blur(function(){
+            var parola = $("#register_parola").text();
+            var reparola = this.text();
+            alert (parola);
+            alert (reparola);
+        });
+
+//        var prenume = $("#nume").val();
+//        var nume = $("#prenume").val();
+//        var email = $("#email").val();
+//        var pas = $("#register_parola").val();
     });
 </script>
+
 </body>
 </html>
 
