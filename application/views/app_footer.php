@@ -31,6 +31,8 @@
 <script src="<?php echo ASSETS; ?>plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
 <script src="<?php echo ASSETS; ?>plugins/bower_components/jquery-sparkline/jquery.charts-sparkline.js"></script>
 <script src="<?php echo ASSETS; ?>plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+<script src="<?php echo ASSETS; ?>plugins/bower_components/morrisjs/morris.js"></script>
+
 <script type="text/javascript">
 
     $(document).ready(function() {
@@ -48,7 +50,6 @@
 </script>
 <!--Style Switcher -->
 <script src="<?php echo ASSETS; ?>plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
-<script src="<?php echo ASSETS; ?>plugins/bower_components/morrisjs/morris.js"></script>
 
 </body>
 </html>
