@@ -219,7 +219,7 @@
         $("#register_link").click(function(e){
             e.preventDefault();
             $("#Login_modal").modal("hide");
-            $("#Register_modal").modal("shows");
+            $("#Register_modal").modal("show");
         });
     });
 </script>
