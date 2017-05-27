@@ -16,7 +16,7 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <form class="form-inline">
+                    <form class="form-horizontal">
                         <div class="form-group">
                             <label for="exampleInputEmail1" class="col-sm-3 control-label">Email*</label>
                             <div class="col-sm-9">
