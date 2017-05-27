@@ -124,7 +124,7 @@
                         <div class="form-group m-b-0">
                             <div class="col-sm-offset-3 col-sm-9 text-right">
                                 <button type="submit" class="btn btn-info waves-effect waves-light m-t-10"
-                                        id="creaza_cont">Creeaza cont
+                                        id="creeaza_cont">Creeaza cont
                                 </button>
                             </div>
                         </div>
@@ -227,50 +227,40 @@
             $("#Login_modal").modal("hide");
             $("#Register_modal").modal("show");
         });
-        $("#register_email").on('input', function () {
-            var regemail = $(this).val();
-            if (!isEmail(regemail)) {
+        $("#creeaza_cont").click(function (e) {
+            e.preventDefault();
+            var nume = $('#nume').val;
+            var prenume = $('#prenume').val;
+            var email = $('#register_email').val;
+            var pass = $('#register_parola').val;
+            var repass = $('#register_reparola').val;
+            if (nume == '') {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').text('Format invalid!').removeClass('hidden');
+                $('#form_errors').text('Numele este obligatoriu!!').removeClass('hidden');
+            }
+            if (prenume == '') {
+                $(this).css({'background-color': '#fb9678', 'color': 'white'});
+                $('#form_errors').text('<br>Prenumele este obligatoriu!!').removeClass('hidden');
+            }
+            if(!isEmail(email)){
+                $('#register_email').css({'background-color': '#fb9678', 'color': 'white'});
+                $('#form_errors').text('<br>Format invalid!').removeClass('hidden');
+            }
+            if (pass == '') {
+                $("#register_parola").css({'background-color': '#fb9678', 'color': 'white'});
+                $('#form_errors').text('<br>Nu ai introdus parola!').removeClass('hidden');
+            }
+            if (pass !== repass) {
+                $("#register_reparola").css({'background-color': '#fb9678', 'color': 'white'});
+                $('#form_errors').text('<br>Parolele nu coincid!').removeClass('hidden');
             }
         });
-
-//        $("#nume").focusout(function () {
-//            var nume = $(this).val();
-//            if (!nume == '') {
-//                $(this).css({'background-color': '#fb9678', 'color': 'white'});
-//                $('#form_errors').text('Numele este obligatoriu!!').removeClass('hidden');
-//            }
-//        });
-//        $("#prenume").focusout(function () {
-//            var prenume = $(this).val();
-//            if (!prenume == '') {
-//                $(this).css({'background-color': '#fb9678', 'color': 'white'});
-//                $('#form_errors').text('Prenumele este obligatoriu!!').removeClass('hidden');
-//            }
-//        });
 
         function isEmail(email) {
             var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             return regex.test(email);
         }
 
-        $("#register_reparola").change(function (e) {
-            var parola = $("#register_parola").val();
-            var reparola = $(this).val();
-            if (parola == '') {
-                $('#form_errors').text('Nu ai introdus parola!').removeClass('hidden');
-                $("#register_parola").css({'background-color': '#fb9678', 'color': 'white'});
-            } else if (parola !== reparola) {
-                $(this).css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').text('Parolele nu coincid!').removeClass('hidden');
-            }
-        });
-
-//        var prenume = $("#nume").val();
-//        var nume = $("#prenume").val();
-//        var email = $("#email").val();
-//        var pas = $("#register_parola").val();
     });
 </script>
 
