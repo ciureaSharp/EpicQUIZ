@@ -23,7 +23,7 @@ $(document).ready(function() {
                     items:3
                 }
             }
-        })
+        });
     // $('a').on('click',function(event){
     //     var $anchor = $(this);
     //     $('html, body').stop().animate({
