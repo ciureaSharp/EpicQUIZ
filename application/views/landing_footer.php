@@ -250,7 +250,8 @@
             if (pass.length === 0) {
                 $("#register_parola").css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').append('<p>Nu ai introdus parola!</p>').removeClass('hidden');
-            } else if (pass.length < 7) {
+            }
+            if (pass.length < 7) {
                 $("#register_parola").css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').append('<p>Minim 6 caractere!</p>').removeClass('hidden');
             }
