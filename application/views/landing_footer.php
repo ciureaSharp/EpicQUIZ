@@ -226,7 +226,7 @@
             $("#Register_modal").modal("show");
         });
 
-        $("#register_reparola").focusout(function(){
+        $("#register_reparola").change(function(e){
             var parola = $("#register_parola").text();
             var reparola = this.text();
             alert (parola);
