@@ -24,12 +24,12 @@ $(document).ready(function() {
                 }
             }
         })
-    $('a').on('click',function(event){
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 90 }, 1000);
-        event.preventDefault();
-    });     
+    // $('a').on('click',function(event){
+    //     var $anchor = $(this);
+    //     $('html, body').stop().animate({
+    //         scrollTop: $($anchor.attr('href')).offset().top - 90 }, 1000);
+    //     event.preventDefault();
+    // });
 
 
  });
