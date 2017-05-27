@@ -14,8 +14,8 @@ class Pages extends CI_Controller
     {
         $page_title = 'EpicQUIZ | Acasa';
         $data['page_title'] = $page_title;
-        $this->load->view("header", $data);
+        $this->load->view("app_header", $data);
         $this->load->view("menus/landing_menu", $data);
-        $this->load->view("footer", $data);
+        $this->load->view("app_footer", $data);
     }
 }
