@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | WITH a trailing slash:
 |
 |	http://example.com/
+|	http://example.com/
 |
 | WARNING: You MUST set this value!
 |
@@ -377,7 +378,7 @@ $config['encryption_key'] = 'ziuqcipe';
 | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
 |
 */
-$config['sess_driver'] = 'files';
+$config['sess_driver'] = 'database';
 $config['sess_cookie_name'] = 'ci_session';
 $config['sess_expiration'] = 7200;
 $config['sess_save_path'] = NULL;
