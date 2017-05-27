@@ -215,7 +215,9 @@
 <script src="<?php echo ASSETS; ?>landing/js/custom.js"></script>
 
 <script>
+    $(document).ready(function () {
 
+    });
 </script>
 </body>
 </html>
