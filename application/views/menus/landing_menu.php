@@ -31,7 +31,7 @@
                     <ul class="nav navbar-nav custom-nav navbar-right">
 
 
-                        <li><a href="#" class="btn btn-danger btn-rounded custom-btn" target="_blank">Cumpara</a></li>
+                        <li><a href="#" class="btn btn-danger btn-rounded custom-btn-success" target="_blank">Cumpara</a></li>
                         <li><a href="#" class="btn btn-success btn-rounded custom-btn" target="_blank">LogIn</a></li>
                         <li><a href="#" target="_blank">Contact</a></li>
                     </ul>
