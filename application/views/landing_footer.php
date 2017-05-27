@@ -15,7 +15,7 @@
                 <h4 class="modal-title" id="Login_modalLabel1">Bine ai venit!</h4>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal">
+                <form>
                     <div class="row">
                         <div class="col-md-5">
                             <div class="form-group">
