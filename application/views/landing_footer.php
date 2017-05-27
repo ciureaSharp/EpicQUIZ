@@ -17,31 +17,31 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-8"  style="border-right: 3px solid #838ea5">
+                    <div class="col-md-8" style="border-right: 3px solid #838ea5">
                         <form class="form-horizontal">
                             <div class="form-group">
-                                <label for="exampleInputEmail1" class="col-sm-3 control-label">Email*</label>
+                                <label for="login_email" class="col-sm-3 control-label">Email*</label>
                                 <div class="col-sm-9">
                                     <div class="input-group">
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
-                                               placeholder="Enter email">
+                                        <input type="email" class="form-control" id="login_email"
+                                               placeholder="Insereaza email">
                                         <div class="input-group-addon"><i class="ti-email"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-3 control-label">Password*</label>
+                                <label for="login_parola" class="col-sm-3 control-label">Parola*</label>
                                 <div class="col-sm-9">
                                     <div class="input-group">
-                                        <input type="password" class="form-control" id="exampleInputpwd2"
-                                               placeholder="Enter pwd">
+                                        <input type="password" class="form-control" id="login_parola"
+                                               placeholder="Insereaza parola">
                                         <div class="input-group-addon"><i class="ti-lock"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group m-b-0">
                                 <div class="col-sm-offset-3 col-sm-9 text-right">
-                                    <button type="submit" class="btn btn-info waves-effect waves-light m-t-10">Sign in
+                                    <button type="submit" class="btn btn-info waves-effect waves-light m-t-10" id="signin">Sign in
                                     </button>
                                 </div>
                             </div>
@@ -64,69 +64,67 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="Register_modalLabel1">Bine ai venit!</h4>
+                <h4 class="modal-title" id="Register_modalLabel1">Creeaza cont</h4>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="exampleInputuname" class="col-sm-3 control-label">Username*</label>
-                        <div class="col-sm-9">
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Username">
-                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                <div class="row">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="prenume" class="col-sm-3 control-label">Prenume*</label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="prenume"
+                                           placeholder="Prenume">
+                                    <div class="input-group-addon"><i class="ti-user"></i></div>
+                                </div>
+                            </div>
+                            <label for="nume" class="col-sm-3 control-label">Nume*</label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="nume"
+                                           placeholder="Nume">
+                                    <div class="input-group-addon"><i class="ti-user"></i></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1" class="col-sm-3 control-label">Email*</label>
-                        <div class="col-sm-9">
-                            <div class="input-group">
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                                <div class="input-group-addon"><i class="ti-email"></i></div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-3 control-label">Email*</label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="email"
+                                           placeholder="Email">
+                                    <div class="input-group-addon"><i class="ti-email"></i></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-3 control-label">Website</label>
-                        <div class="col-sm-9">
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="exampleInputpwd1" placeholder="Enter Website Name">
-                                <div class="input-group-addon"><i class="ti-world"></i></div>
+                        <div class="form-group">
+                            <label for="register_parola" class="col-sm-3 control-label">Parola*</label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="register_parola"
+                                           placeholder="Parola">
+                                    <div class="input-group-addon"><i class="ti-lock"></i></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword3" class="col-sm-3 control-label">Password*</label>
-                        <div class="col-sm-9">
-                            <div class="input-group">
-                                <input type="password" class="form-control" id="exampleInputpwd2" placeholder="Enter pwd">
-                                <div class="input-group-addon"><i class="ti-lock"></i></div>
+                        <div class="form-group">
+                            <label for="register_reparola" class="col-sm-3 control-label">Confirma parola*</label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="register_reparola"
+                                           placeholder="Confirma parola">
+                                    <div class="input-group-addon"><i class="ti-lock"></i></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword4" class="col-sm-3 control-label">Re Password*</label>
-                        <div class="col-sm-9">
-                            <div class="input-group">
-                                <input type="password" class="form-control" id="exampleInputpwd2" placeholder="Re Enter pwd">
-                                <div class="input-group-addon"><i class="ti-lock"></i></div>
+                        <div class="form-group m-b-0">
+                            <div class="col-sm-offset-3 col-sm-9 text-right">
+                                <button type="submit" class="btn btn-info waves-effect waves-light m-t-10" id="creaza_cont">Creeaza cont
+                                </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-3 col-sm-9">
-                            <div class="checkbox checkbox-success">
-                                <input id="checkbox34" type="checkbox">
-                                <label for="checkbox34">Check me out !</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group m-b-0">
-                        <div class="col-sm-offset-3 col-sm-9 text-right">
-                            <button type="submit" class="btn btn-info waves-effect waves-light m-t-10">Sign in</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
