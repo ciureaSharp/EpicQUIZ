@@ -47,7 +47,7 @@
                         </form>
                     </div>
                     <div class="col-md-4">
-                        <h4 style="padding-top: 0px !important;">Inca nu ai cont?</h4>
+                        <h4 style="padding-top: 2px !important;">Inca nu ai cont?</h4>
                         <p>Click <a href="#">aici</a> pentru a te inregistra.</p>
                         <h4 class="text-success">Stii ca vrei!</h4>
                     </div>
