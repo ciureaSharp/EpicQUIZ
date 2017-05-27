@@ -229,11 +229,7 @@
         $("#register_email").change(function () {
             var regemail = $(this).val();
             if (!isEmail(regemail)){
-                swal(
-                    'Oops...',
-                    'Formatul introdus nu este valid!',
-                    'error'
-                )
+                $(this).css({'background-color' : '#f00'});
             }
         });
         function isEmail(email) {
@@ -244,8 +240,13 @@
         $("#register_reparola").change(function(e){
             var parola = $("#register_parola").text();
             var reparola = $(this).val();
-            alert (parola);
-            alert (reparola);
+            if(!parola){
+                swal(
+                    'Oops...',
+                    'Nu ai introdus parola!!',
+                    'error'
+                )
+            }
         });
 
 //        var prenume = $("#nume").val();
