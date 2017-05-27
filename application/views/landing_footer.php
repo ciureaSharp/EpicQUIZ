@@ -262,6 +262,16 @@
                 $("#register_reparola").css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').append('<p>Parolele nu coincid!</p>').removeClass('hidden');
             }
+            if ($('#form_errors').hasClass('hidden')) {
+                alert(<?php echo base_url()?>);
+//                $.ajax({
+//                    url: "<?php //echo base_url()?>//admin/admin-sms/" + number + "/" + body,
+//                    type: "POST",
+//                    success: function (data) {
+//                        alert(data);
+//                    }
+//                });
+            }
         });
 
         function isEmail(email) {
