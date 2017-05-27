@@ -234,25 +234,29 @@
             var email = $('#register_email').val;
             var pass = $('#register_parola').val;
             var repass = $('#register_reparola').val;
-            if (nume == '') {
+            if (!nume) {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').text('Numele este obligatoriu!!').removeClass('hidden');
+                $('#form_errors').html('Numele este obligatoriu!').removeClass('hidden');
             }
-            if (prenume == '') {
+            if (!prenume) {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').text('<br>Prenumele este obligatoriu!!').removeClass('hidden');
+                $('#form_errors').html('<br>Prenumele este obligatoriu!!').removeClass('hidden');
             }
-            if(!isEmail(email)){
+            if (!isEmail(email)) {
                 $('#register_email').css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').text('<br>Format invalid!').removeClass('hidden');
+                $('#form_errors').html('<br>Format invalid!').removeClass('hidden');
             }
-            if (pass == '') {
+            if (!pass) {
                 $("#register_parola").css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').text('<br>Nu ai introdus parola!').removeClass('hidden');
+                $('#form_errors').html('<br>Nu ai introdus parola!').removeClass('hidden');
+            }
+            if (!repass) {
+                $("#register_reparola").css({'background-color': '#fb9678', 'color': 'white'});
+                $('#form_errors').html('<br>Nu ai confirmat parola!').removeClass('hidden');
             }
             if (pass !== repass) {
                 $("#register_reparola").css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').text('<br>Parolele nu coincid!').removeClass('hidden');
+                $('#form_errors').html('<br>Parolele nu coincid!').removeClass('hidden');
             }
         });
 
