@@ -14,20 +14,31 @@
                 <h4 class="modal-title" id="exampleModalLabel1">New message</h4>
             </div>
             <div class="modal-body">
-                <form>
+                <form class="form-horizontal">
                     <div class="form-group">
-                        <label for="recipient-name" class="control-label">Recipient:</label>
-                        <input type="text" class="form-control" id="recipient-name1">
+                        <label for="exampleInputEmail1" class="col-sm-3 control-label">Email*</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <div class="input-group-addon"><i class="ti-email"></i></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="message-text" class="control-label">Message:</label>
-                        <textarea class="form-control" id="message-text1"></textarea>
+                        <label for="inputPassword3" class="col-sm-3 control-label">Password*</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="exampleInputpwd2" placeholder="Enter pwd">
+                                <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-b-0">
+                        <div class="col-sm-offset-3 col-sm-9 text-right">
+                            <button type="submit" class="btn btn-info waves-effect waves-light m-t-10">Sign in</button>
+                        </div>
                     </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
             </div>
         </div>
     </div>
