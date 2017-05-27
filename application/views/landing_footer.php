@@ -16,8 +16,8 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-8" style="border-right: #333;">
-                        <form class="form-horizontal">
+                    <div class="col-md-8">
+                        <form class="form-horizontal"  style="border-right: #333;">
                             <div class="form-group">
                                 <label for="exampleInputEmail1" class="col-sm-3 control-label">Email*</label>
                                 <div class="col-sm-9">
@@ -47,7 +47,7 @@
                         </form>
                     </div>
                     <div class="col-md-4">
-                        <h4>Inca nu ai cont?</h4>
+                        <h4 style="padding-top: 0px !important;">Inca nu ai cont?</h4>
                         <p>Click <a href="#">aici</a> pentru a te inregistra.</p>
                         <h4 class="text-success">Stii ca vrei!</h4>
                     </div>
