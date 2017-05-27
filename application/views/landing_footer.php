@@ -49,7 +49,7 @@
                     </div>
                     <div class="col-md-4">
                         <h4 style="margin-top: 0px !important;">Inca nu ai cont?</h4>
-                        <p>Click <a href="#Register_modal">aici</a> pentru a te inregistra.</p>
+                        <p>Click <a id="register_link" href="#Register_modal">aici</a> pentru a te inregistra.</p>
                         <h4 class="text-success">Stii ca vrei!</h4>
                     </div>
                 </div>
@@ -215,7 +215,7 @@
 <script src="<?php echo ASSETS; ?>landing/js/custom.js"></script>
 
 <script>
-    
+
 </script>
 </body>
 </html>
