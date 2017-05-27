@@ -213,5 +213,11 @@
 <!-- jQuery for carousel -->
 <script src="<?php echo ASSETS; ?>plugins/bower_components/owl.carousel/owl.carousel.min.js"></script>
 <script src="<?php echo ASSETS; ?>landing/js/custom.js"></script>
+
+<script>
+    
+</script>
 </body>
 </html>
+
+
