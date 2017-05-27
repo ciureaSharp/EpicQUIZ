@@ -32,7 +32,7 @@
 
 
                         <li><a href="#" class="btn btn-danger btn-rounded custom-btn" target="_blank">Cumpara</a></li>
-                        <li><a href="#" class="btn btn-success btn-rounded custom-btn-success" target="_blank">LogIn</a></li>
+                        <li><a href="#" class="btn btn-success btn-rounded custom-btn-success" target="_blank" data-target="#Login_modal" data-toggle="modal">LogIn</a></li>
                         <li><a href="#" target="_blank">Contact</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
