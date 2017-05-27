@@ -245,8 +245,7 @@
                 $("#register_parola").css({'background-color': 'rgba(255, 0, 0, 0.5)'});
             } else if (parola !== reparola) {
                 $(this).css({'background-color': 'rgba(255, 0, 0, 0.5)'});
-                $('#form_errors').text('Parolele nu coincid!');
-                $('#form_errors').removeClass('hidden');
+                $('#form_errors').text('Parolele nu coincid!').removeClass('hidden');
             }
         });
 
