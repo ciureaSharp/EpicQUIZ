@@ -71,7 +71,7 @@
                 <div class="white-box">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label for="prenume" class="col-sm-3 control-label">Prenume*</label>
+                            <label align="left" for="prenume" class="col-sm-3 control-label">Prenume*</label>
                             <div class="col-sm-9">
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="prenume"
