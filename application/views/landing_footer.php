@@ -91,10 +91,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="col-sm-3 control-label">Email*</label>
+                            <label for="register_email" class="col-sm-3 control-label">Email*</label>
                             <div class="col-sm-9">
                                 <div class="input-group">
-                                    <input type="email" class="form-control" id="email"
+                                    <input type="email" class="form-control" id="register_email"
                                            placeholder="Email">
                                     <div class="input-group-addon"><i class="ti-email"></i></div>
                                 </div>
@@ -225,6 +225,16 @@
             $("#Login_modal").modal("hide");
             $("#Register_modal").modal("show");
         });
+        $("#register_email").change(function () {
+            var regemail = $(this).val();
+            if (!isEmail(regemail)){
+                alert ("ceva");
+            }
+        });
+        function isEmail(email) {
+            var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return regex.test(email);
+        }
 
         $("#register_reparola").change(function(e){
             var parola = $("#register_parola").text();
