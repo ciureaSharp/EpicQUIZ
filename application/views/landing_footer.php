@@ -274,7 +274,21 @@
                         pass: pass
                     },
                     success: function (data) {
-                        alert(data);
+                        if (data == 1) {
+                            swal(
+                                'OK!',
+                                'Contul tau a fost creat!',
+                                'success'
+                            );
+
+                            //redirect to my account
+                        } else if (data == 0) {
+                            swal(
+                                'Eroare!',
+                                'Adresa de email exista!',
+                                'error'
+                            );
+                        }
                     }
                 });
             }

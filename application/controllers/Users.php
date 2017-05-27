@@ -15,9 +15,14 @@ class Users extends CI_Controller
         $nume = $_POST['nume'];
         $prenume = $_POST['prenume'];
         $email = $_POST['email'];
-        $pass = md5($_POST['pass'].SALT);
+        $pass = md5($_POST['pass'] . SALT);
         $this->load->model('Users_model');
-        $ret = $this->Users_model->register($nume,$prenume,$email,$pass);
-        var_dump($ret);
+        $ret = $this->Users_model->register($email, $pass);
+        if ($ret) {
+            //create session, add session data
+            echo 1;
+        } else {
+            echo 0;
+        }
     }
 }
