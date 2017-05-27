@@ -234,7 +234,7 @@
             var email = $('#register_email').val;
             var pass = $('#register_parola').val;
             var repass = $('#register_reparola').val;
-            if (!nume) {
+            if (nume.length == 0) {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').html('Numele este obligatoriu!').removeClass('hidden');
             }
