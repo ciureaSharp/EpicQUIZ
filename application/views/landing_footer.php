@@ -234,11 +234,11 @@
             var email = $('#register_email').val();
             var pass = $('#register_parola').val();
             var repass = $('#register_reparola').val();
-            if (!nume) {
+            if (nume == '') {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').html('Numele este obligatoriu!').removeClass('hidden');
             }
-            if (!prenume) {
+            if (prenume == '') {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').html('<br>Prenumele este obligatoriu!!').removeClass('hidden');
             }
