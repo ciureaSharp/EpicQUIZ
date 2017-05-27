@@ -239,9 +239,10 @@
         }
 
         $("#register_reparola").change(function (e) {
-            var parola = $("#register_parola").text();
+            var parola = $("#register_parola").val();
             var reparola = $(this).val();
             if (parola == '') {
+                $('#form_errors').text('Nu ai introdus parola!').removeClass('hidden');
                 $("#register_parola").css({'background-color': 'rgba(255, 0, 0, 0.5)'});
             } else if (parola !== reparola) {
                 $(this).css({'background-color': 'rgba(255, 0, 0, 0.5)'});
