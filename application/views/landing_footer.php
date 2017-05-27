@@ -227,11 +227,10 @@
         });
 
         $("#register_reparola").change(function(e){
-            alert('a');
-//            var parola = $("#register_parola").text();
-//            var reparola = this.text();
-//            alert (parola);
-//            alert (reparola);
+            var parola = $("#register_parola").text();
+            var reparola = this.text();
+            alert (parola);
+            alert (reparola);
         });
 
 //        var prenume = $("#nume").val();
