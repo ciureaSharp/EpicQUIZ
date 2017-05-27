@@ -15,9 +15,9 @@
                 <h4 class="modal-title" id="Login_modalLabel1">Bine ai venit!</h4>
             </div>
             <div class="modal-body">
-                <form>
-                    <div class="row">
-                        <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-8" style="border-right: #333;">
+                        <form class="form-horizontal">
                             <div class="form-group">
                                 <label for="exampleInputEmail1" class="col-sm-3 control-label">Email*</label>
                                 <div class="col-sm-9">
@@ -28,8 +28,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-5">
                             <div class="form-group">
                                 <label for="inputPassword3" class="col-sm-3 control-label">Password*</label>
                                 <div class="col-sm-9">
@@ -40,17 +38,20 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-2">
                             <div class="form-group m-b-0">
                                 <div class="col-sm-offset-3 col-sm-9 text-right">
                                     <button type="submit" class="btn btn-info waves-effect waves-light m-t-10">Sign in
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                </form>
+                    <div class="col-md-4">
+                        <h4>Inca nu ai cont?</h4>
+                        <p>Click <a href="#">aici</a> pentru a te inregistra.</p>
+                        <h4 class="text-success">Stii ca vrei!</h4>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -60,35 +61,43 @@
     <div class="row">
         <div class="fix-width">
             <div class="col-md-3 col-sm-6"><img src="<?php echo ASSETS; ?>landing/images/footer-logo.png"/>
-                <p class="m-t-30"><font class="text-white">Eliteadmin</font> is premium quality admin dashboard template
-                    with flat design. It is fully responsive admin dashboard template built with Bootstrap Framework,
-                    HTML5 & CSS3, Media query. </p></div>
+                <p class="m-t-30"><font class="text-white">Eliteadmin</font> is premium quality admin dashboard
+                    template with flat design. It is fully responsive admin dashboard template built with
+                    Bootstrap Framework, HTML5 & CSS3, Media query. </p></div>
             <div class="col-md-3 col-sm-6">
                 <ul class="footer-link list-icons">
                     <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/index.html"><i
                                 class="ti-angle-right text-megna"></i> Minimal Dashboard</a></li>
-                    <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/index2.html"><i
+                    <li>
+                        <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/index2.html"><i
                                 class="ti-angle-right text-megna"></i> Demographical Dashboad</a></li>
-                    <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/index3.html"><i
+                    <li>
+                        <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/index3.html"><i
                                 class="ti-angle-right text-megna"></i> Analytical Dashboad</a></li>
-                    <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/index4.html"><i
+                    <li>
+                        <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/index4.html"><i
                                 class="ti-angle-right text-megna"></i> Simpler Dashboard</a></li>
-                    <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-ecommerce/index.html"><i
+                    <li>
+                        <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-ecommerce/index.html"><i
                                 class="ti-angle-right text-megna"></i> eCommerce Dashboard</a></li>
                 </ul>
             </div>
             <div class="col-md-3 col-sm-6">
                 <ul class="footer-link list-icons">
-                    <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/widgets.html"><i
+                    <li>
+                        <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/widgets.html"><i
                                 class="ti-angle-right text-megna"></i> Widget Sections</a></li>
                     <li>
                         <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/morris-chart.html"><i
                                 class="ti-angle-right text-megna"></i> Chart Options</a></li>
-                    <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/form-layout.html"><i
+                    <li>
+                        <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/form-layout.html"><i
                                 class="ti-angle-right text-megna"></i> Lots of Form Layouts</a></li>
-                    <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/data-table.html"><i
+                    <li>
+                        <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/data-table.html"><i
                                 class="ti-angle-right text-megna"></i> Data Table Options</a></li>
-                    <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/calendar.html"><i
+                    <li>
+                        <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/calendar.html"><i
                                 class="ti-angle-right text-megna"></i> Calendar Designs</a></li>
                 </ul>
             </div>
@@ -96,11 +105,14 @@
                 <ul class="footer-link list-icons">
                     <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/inbox.html"><i
                                 class="ti-angle-right text-megna"></i> Inbox Layout</a></li>
-                    <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/treeview.html"><i
+                    <li>
+                        <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/treeview.html"><i
                                 class="ti-angle-right text-megna"></i> Tree View Options</a></li>
-                    <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/carousel.html"><i
+                    <li>
+                        <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/carousel.html"><i
                                 class="ti-angle-right text-megna"></i> Carousel Slider Option</a></li>
-                    <li><a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/gallery.html"><i
+                    <li>
+                        <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/gallery.html"><i
                                 class="ti-angle-right text-megna"></i> Gallery Option</a></li>
                     <li>
                         <a href="http://themedesigner.in/demo/eliteadmin-package/eliteadmin-inverse/starter-page.html"><i
@@ -111,7 +123,8 @@
 
             <div class="col-md-12 sub-footer">
                 <span>Copyright 2016. All Rights Reserved by <font class="text-white">Elite Admin</font></span>
-                <span class="pull-right">Design & Developed by <font class="text-white">Theme Designer</font></span>
+                        <span class="pull-right">Design & Developed by <font class="text-white">Theme
+                                Designer</font></span>
             </div>
 
         </div>
