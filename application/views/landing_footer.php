@@ -49,7 +49,7 @@
                     </div>
                     <div class="col-md-4">
                         <h4 style="margin-top: 0px !important;">Inca nu ai cont?</h4>
-                        <p>Click <a href="#Login_modal">aici</a> pentru a te inregistra.</p>
+                        <p>Click <a href="#Register_modal">aici</a> pentru a te inregistra.</p>
                         <h4 class="text-success">Stii ca vrei!</h4>
                     </div>
                 </div>
@@ -58,13 +58,13 @@
     </div>
 </div>
 
-<div class="modal fade" id="Login_modal" tabindex="-1" role="dialog" aria-labelledby="Login_modalLabel1">
+<div class="modal fade" id="Register_modal" tabindex="-1" role="dialog" aria-labelledby="Register_modalLabel1">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="Login_modalLabel1">Bine ai venit!</h4>
+                <h4 class="modal-title" id="Register_modalLabel1">Bine ai venit!</h4>
             </div>
             <div class="modal-body">
                 <form class="form-horizontal">
