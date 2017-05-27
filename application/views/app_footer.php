@@ -24,7 +24,7 @@
 <script src="<?php echo ASSETS; ?>plugins/bower_components/counterup/jquery.counterup.min.js"></script>
 <!--Morris JavaScript -->
 <script src="<?php echo ASSETS; ?>plugins/bower_components/raphael/raphael-min.js"></script>
-<script src="<?php echo ASSETS; ?>plugins/bower_components/morrisjs/morris.js"></script>
+<!--<script src="--><?php //echo ASSETS; ?><!--plugins/bower_components/morrisjs/morris.js"></script>-->
 <!-- Custom Theme JavaScript -->
 <script src="<?php echo ASSETS; ?>js/custom.js"></script>
 <script src="<?php echo ASSETS; ?>js/dashboard1.js"></script>
