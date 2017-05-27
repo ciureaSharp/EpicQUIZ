@@ -229,7 +229,7 @@
         $("#register_email").change(function () {
             var regemail = $(this).val();
             if (!isEmail(regemail)){
-                $(this).css({'background-color' : '#f00'});
+                $(this).css({'background-color' : 'rgba(255, 0, 0, 0.5)'});
             }
         });
         function isEmail(email) {
