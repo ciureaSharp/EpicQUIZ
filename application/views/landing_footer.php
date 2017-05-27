@@ -229,7 +229,7 @@
         });
         $("#creeaza_cont").click(function (e) {
             e.preventDefault();
-            var nume = $('#nume').text();
+            var nume = $('#nume').val();
             var prenume = $('#prenume').text();
             var email = $('#register_email').val();
             var pass = $('#register_parola').val();
