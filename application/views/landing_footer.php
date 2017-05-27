@@ -228,7 +228,7 @@
 
         $("#register_reparola").change(function(e){
             var parola = $("#register_parola").text();
-            var reparola = $(this).text();
+            var reparola = $(this).val();
             alert (parola);
             alert (reparola);
         });
