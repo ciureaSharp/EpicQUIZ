@@ -228,7 +228,11 @@
         $("#register_email").change(function () {
             var regemail = $(this).val();
             if (!isEmail(regemail)){
-                alert ("ceva");
+                swal(
+                    'Oops...',
+                    'Formatul introdus nu este valid!',
+                    'error'
+                )
             }
         });
         function isEmail(email) {
