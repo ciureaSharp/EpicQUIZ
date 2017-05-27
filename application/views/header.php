@@ -38,3 +38,9 @@
     <![endif]-->
     <script src="https://www.w3schools.com/lib/w3data.js"></script>
 </head>
+<body>
+<!-- Preloader -->
+<div class="preloader">
+    <div class="cssload-speeding-wheel"></div>
+</div>
+<div id="wrapper">

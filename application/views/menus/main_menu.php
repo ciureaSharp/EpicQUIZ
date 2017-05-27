@@ -7,12 +7,7 @@
  */
 
 ?>
-<body>
-<!-- Preloader -->
-<div class="preloader">
-    <div class="cssload-speeding-wheel"></div>
-</div>
-<div id="wrapper">
+
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-static-top m-b-0">
         <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
