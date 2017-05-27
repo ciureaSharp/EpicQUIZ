@@ -230,9 +230,26 @@
         $("#register_email").change(function () {
             var regemail = $(this).val();
             if (!isEmail(regemail)) {
-                $(this).css({'background-color': 'rgba(255, 0, 0, 0.5)'});
+                $(this).css({'background-color': '#fb9678', 'color': 'white'});
+                $('#form_errors').text('Format invalid!').removeClass('hidden');
             }
         });
+
+        $("#nume").change(function () {
+            var nume = $(this).val();
+            if (!nume == '') {
+                $(this).css({'background-color': '#fb9678', 'color': 'white'});
+                $('#form_errors').text('Numele este obligatoriu!!').removeClass('hidden');
+            }
+        });
+        $("#prenume").change(function () {
+            var prenume = $(this).val();
+            if (!prenume == '') {
+                $(this).css({'background-color': '#fb9678', 'color': 'white'});
+                $('#form_errors').text('Prenumele este obligatoriu!!').removeClass('hidden');
+            }
+        });
+
         function isEmail(email) {
             var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             return regex.test(email);
@@ -243,9 +260,9 @@
             var reparola = $(this).val();
             if (parola == '') {
                 $('#form_errors').text('Nu ai introdus parola!').removeClass('hidden');
-                $("#register_parola").css({'background-color': 'rgba(255, 0, 0, 0.5)'});
+                $("#register_parola").css({'background-color': '#fb9678', 'color': 'white'});
             } else if (parola !== reparola) {
-                $(this).css({'background-color': 'rgba(255, 0, 0, 0.5)'});
+                $(this).css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').text('Parolele nu coincid!').removeClass('hidden');
             }
         });
