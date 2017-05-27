@@ -245,7 +245,7 @@
             }
             if (!isEmail(email)) {
                 $('#register_email').css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').append('<p>Format invalid!</p>').removeClass('hidden');
+                $('#form_errors').append('<p>Formatul email-ului invalid!</p>').removeClass('hidden');
             }
             if (pass.length === 0) {
                 $("#register_parola").css({'background-color': '#fb9678', 'color': 'white'});
@@ -255,7 +255,7 @@
                 $("#register_reparola").css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').append('<p>Nu ai confirmat parola!</p>').removeClass('hidden');
             }
-            if (pass !== repass) {
+            if (pass.length > 0 && (pass !== repass)) {
                 $("#register_reparola").css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').append('<p>Parolele nu coincid!</p>').removeClass('hidden');
             }
