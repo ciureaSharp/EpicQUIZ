@@ -227,7 +227,7 @@
             $("#Login_modal").modal("hide");
             $("#Register_modal").modal("show");
         });
-        $("#register_email").change(function () {
+        $("#register_email").input(function () {
             var regemail = $(this).val();
             if (!isEmail(regemail)) {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
@@ -235,20 +235,20 @@
             }
         });
 
-        $("#nume").focusout(function () {
-            var nume = $(this).val();
-            if (!nume == '') {
-                $(this).css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').text('Numele este obligatoriu!!').removeClass('hidden');
-            }
-        });
-        $("#prenume").focusout(function () {
-            var prenume = $(this).val();
-            if (!prenume == '') {
-                $(this).css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').text('Prenumele este obligatoriu!!').removeClass('hidden');
-            }
-        });
+//        $("#nume").focusout(function () {
+//            var nume = $(this).val();
+//            if (!nume == '') {
+//                $(this).css({'background-color': '#fb9678', 'color': 'white'});
+//                $('#form_errors').text('Numele este obligatoriu!!').removeClass('hidden');
+//            }
+//        });
+//        $("#prenume").focusout(function () {
+//            var prenume = $(this).val();
+//            if (!prenume == '') {
+//                $(this).css({'background-color': '#fb9678', 'color': 'white'});
+//                $('#form_errors').text('Prenumele este obligatoriu!!').removeClass('hidden');
+//            }
+//        });
 
         function isEmail(email) {
             var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
