@@ -16,37 +16,31 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    <form class="form-horizontal">
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1" class="col-sm-3 control-label">Email*</label>
-                                <div class="col-sm-9">
-                                    <div class="input-group">
-                                        <input type="email" class="form-control" id="exampleInputEmail1"
-                                               placeholder="Enter email">
-                                        <div class="input-group-addon"><i class="ti-email"></i></div>
-                                    </div>
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="col-sm-3 control-label">Email*</label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                           placeholder="Enter email">
+                                    <div class="input-group-addon"><i class="ti-email"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-3 control-label">Password*</label>
-                                <div class="col-sm-9">
-                                    <div class="input-group">
-                                        <input type="password" class="form-control" id="exampleInputpwd2"
-                                               placeholder="Enter pwd">
-                                        <div class="input-group-addon"><i class="ti-lock"></i></div>
-                                    </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-3 control-label">Password*</label>
+                            <div class="col-sm-9">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="exampleInputpwd2"
+                                           placeholder="Enter pwd">
+                                    <div class="input-group-addon"><i class="ti-lock"></i></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2">
-                            <div class="form-group m-b-0">
-                                <div class="col-sm-offset-3 col-sm-9 text-right">
-                                    <button type="submit" class="btn btn-info waves-effect waves-light m-t-10">Sign in
-                                    </button>
-                                </div>
+                        <div class="form-group m-b-0">
+                            <div class="col-sm-offset-3 col-sm-9 text-right">
+                                <button type="submit" class="btn btn-info waves-effect waves-light m-t-10">Sign in
+                                </button>
                             </div>
                         </div>
                     </form>
