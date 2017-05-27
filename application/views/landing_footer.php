@@ -234,11 +234,11 @@
             var email = $('#register_email').val();
             var pass = $('#register_parola').val();
             var repass = $('#register_reparola').val();
-            if (!nume) {
+            if (nume.length === 0) {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').html('Numele este obligatoriu!').removeClass('hidden');
             }
-            if (!prenume) {
+            if (prenume.length === 0) {
                 $(this).css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').html('<br>Prenumele este obligatoriu!!').removeClass('hidden');
             }
@@ -246,11 +246,11 @@
                 $('#register_email').css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').html('<br>Format invalid!').removeClass('hidden');
             }
-            if (!pass) {
+            if (pass.length === 0) {
                 $("#register_parola").css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').html('<br>Nu ai introdus parola!').removeClass('hidden');
             }
-            if (!repass) {
+            if (repass.length === 0) {
                 $("#register_reparola").css({'background-color': '#fb9678', 'color': 'white'});
                 $('#form_errors').html('<br>Nu ai confirmat parola!').removeClass('hidden');
             }
