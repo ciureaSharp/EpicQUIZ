@@ -71,7 +71,7 @@
                 <div class="white-box">
                     <form class="form-horizontal">
                         <div class="form-group">
-                            <label align="left" for="prenume" class="col-sm-3 control-label">Prenume*</label>
+                            <label for="prenume" class="col-sm-3 control-label">Prenume*</label>
                             <div class="col-sm-9">
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="prenume"
@@ -84,7 +84,7 @@
                             <label for="nume" class="col-sm-3 control-label">Nume*</label>
                             <div class="col-sm-9">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="nume"
+                                    <input align="left" type="text" class="form-control" id="nume"
                                            placeholder="Nume">
                                     <div class="input-group-addon"><i class="ti-user"></i></div>
                                 </div>
