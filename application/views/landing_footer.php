@@ -120,7 +120,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="alert alert-danger hidden" id="form_errors"></p>
+                        <div class="alert alert-danger hidden" id="form_errors"></div>
                         <div class="form-group m-b-0">
                             <div class="col-sm-offset-3 col-sm-9 text-right">
                                 <button type="submit" class="btn btn-info waves-effect waves-light m-t-10"
@@ -234,30 +234,29 @@
             var email = $('#register_email').val();
             var pass = $('#register_parola').val();
             var repass = $('#register_reparola').val();
-            alert(nume.length);
             if (nume.length == 0) {
-                $(this).css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').html('Numele este obligatoriu!').removeClass('hidden');
+                $('#nume').css({'background-color': '#fb9678', 'color': 'white'});
+                $('#form_errors').html('<p>Numele este obligatoriu!</p>').removeClass('hidden');
             }
-            if (prenume == '') {
-                $(this).css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').html('<br>Prenumele este obligatoriu!!').removeClass('hidden');
+            if (prenume.length == 0) {
+                $('#prenume').css({'background-color': '#fb9678', 'color': 'white'});
+                $('#form_errors').html('<p>Prenumele este obligatoriu!</p>').removeClass('hidden');
             }
             if (!isEmail(email)) {
                 $('#register_email').css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').html('<br>Format invalid!').removeClass('hidden');
+                $('#form_errors').html('<p>Format invalid!</p>').removeClass('hidden');
             }
             if (pass.length === 0) {
                 $("#register_parola").css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').html('<br>Nu ai introdus parola!').removeClass('hidden');
+                $('#form_errors').html('<p>Nu ai introdus parola!</p>').removeClass('hidden');
             }
             if (repass.length === 0) {
                 $("#register_reparola").css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').html('<br>Nu ai confirmat parola!').removeClass('hidden');
+                $('#form_errors').html('<p>Nu ai confirmat parola!</p>').removeClass('hidden');
             }
             if (pass !== repass) {
                 $("#register_reparola").css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').html('<br>Parolele nu coincid!').removeClass('hidden');
+                $('#form_errors').html('<p>Parolele nu coincid!</p>').removeClass('hidden');
             }
         });
 
