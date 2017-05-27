@@ -6,6 +6,7 @@
  * Time: 18:14
  */
 ?>
+
 <div class="modal fade" id="Login_modal" tabindex="-1" role="dialog" aria-labelledby="Login_modalLabel1">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -48,10 +49,84 @@
                     </div>
                     <div class="col-md-4">
                         <h4 style="margin-top: 0px !important;">Inca nu ai cont?</h4>
-                        <p>Click <a href="#">aici</a> pentru a te inregistra.</p>
+                        <p>Click <a href="#Register_modal">aici</a> pentru a te inregistra.</p>
                         <h4 class="text-success">Stii ca vrei!</h4>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Register_modal" tabindex="-1" role="dialog" aria-labelledby="Register_modalLabel1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="Register_modalLabel1">Bine ai venit!</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="exampleInputuname" class="col-sm-3 control-label">Username*</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="exampleInputuname" placeholder="Username">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="col-sm-3 control-label">Email*</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                <div class="input-group-addon"><i class="ti-email"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">Website</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="exampleInputpwd1" placeholder="Enter Website Name">
+                                <div class="input-group-addon"><i class="ti-world"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">Password*</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="exampleInputpwd2" placeholder="Enter pwd">
+                                <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword4" class="col-sm-3 control-label">Re Password*</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="exampleInputpwd2" placeholder="Re Enter pwd">
+                                <div class="input-group-addon"><i class="ti-lock"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <div class="checkbox checkbox-success">
+                                <input id="checkbox34" type="checkbox">
+                                <label for="checkbox34">Check me out !</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group m-b-0">
+                        <div class="col-sm-offset-3 col-sm-9 text-right">
+                            <button type="submit" class="btn btn-info waves-effect waves-light m-t-10">Sign in</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
