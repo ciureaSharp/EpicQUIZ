@@ -236,27 +236,27 @@
             var repass = $('#register_reparola').val();
             if (nume.length == 0) {
                 $('#nume').css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').html('<p>Numele este obligatoriu!</p>').removeClass('hidden');
+                $('#form_errors').append('<p>Numele este obligatoriu!</p>').removeClass('hidden');
             }
             if (prenume.length == 0) {
                 $('#prenume').css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').html('<p>Prenumele este obligatoriu!</p>').removeClass('hidden');
+                $('#form_errors').append('<p>Prenumele este obligatoriu!</p>').removeClass('hidden');
             }
             if (!isEmail(email)) {
                 $('#register_email').css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').html('<p>Format invalid!</p>').removeClass('hidden');
+                $('#form_errors').append('<p>Format invalid!</p>').removeClass('hidden');
             }
             if (pass.length === 0) {
                 $("#register_parola").css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').html('<p>Nu ai introdus parola!</p>').removeClass('hidden');
+                $('#form_errors').append('<p>Nu ai introdus parola!</p>').removeClass('hidden');
             }
             if (repass.length === 0) {
                 $("#register_reparola").css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').html('<p>Nu ai confirmat parola!</p>').removeClass('hidden');
+                $('#form_errors').append('<p>Nu ai confirmat parola!</p>').removeClass('hidden');
             }
             if (pass !== repass) {
                 $("#register_reparola").css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').html('<p>Parolele nu coincid!</p>').removeClass('hidden');
+                $('#form_errors').append('<p>Parolele nu coincid!</p>').removeClass('hidden');
             }
         });
 
