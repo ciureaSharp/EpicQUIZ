@@ -222,13 +222,13 @@
 
 <script>
     $(document).ready(function () {
-        
+
         $("#register_link").click(function (e) {
             e.preventDefault();
             $("#Login_modal").modal("hide");
             $("#Register_modal").modal("show");
         });
-       
+
         $("#creeaza_cont").click(function (e) {
             e.preventDefault();
             $('#form_errors').empty();
@@ -300,26 +300,27 @@
             var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             return regex.test(email);
         }
-        
+
         $("#signin").click(function (e) {
             e.preventDefault();
             var email = $("#login_email").val();
             var pass = $("#login_parola").val();
+            alert(email);
             $.ajax({
-               url: "<?php echo base_url()?>login",
-               type: "POST",
+                url: "<?php echo base_url()?>login",
+                type: "POST",
                 data: {
                     email: email,
                     pass: pass
                 },
-                success: function(data){
-                    if (data == 1){
-                        swal (
+                success: function (data) {
+                    if (data == 1) {
+                        swal(
                             'OK!',
                             'Logare realizata cu success',
                             'success'
                         );
-                    } else if (data == 0){
+                    } else if (data == 0) {
                         swal(
                             'Eroare!',
                             'Adresa de email/parola incorecte',
