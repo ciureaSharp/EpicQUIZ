@@ -320,7 +320,7 @@
                             'success'
                         );
                     } else if (data == 0){
-                        sqal(
+                        swal(
                             'Eroare!',
                             'Adresa de email/parola incorecte',
                             'error'
