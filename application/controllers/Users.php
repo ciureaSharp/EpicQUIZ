@@ -25,4 +25,15 @@ class Users extends CI_Controller
             echo 0;
         }
     }
+    public function login()
+    {
+        $email = $_POST['email'];
+        $pass = md5($_POST['pass'] . SALT);
+        $this->load->model('User_model');
+        if ($this->Users_model->login($email, $pass)){
+            echo 1;
+        } else {
+            echo 2;
+        }
+    }
 }

@@ -31,7 +31,7 @@ Class Users_model extends CI_Model
 //// Read data using username and password
 //    public function login($data) {
 //
-//        $condition = "email =" . "'" . $data['username'] . "' AND " . "password =" . "'" . md5($data['password']) . "' AND activ='1'";
+//        $condition = "email =" . "'" . $data['username'] . "' AND " . "password =" . "'" . md5($data['password']) . "' AND activ";
 //        $this->db->select('*');
 //        $this->db->from('operatori');
 //        $this->db->where($condition);

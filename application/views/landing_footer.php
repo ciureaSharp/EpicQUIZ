@@ -222,11 +222,13 @@
 
 <script>
     $(document).ready(function () {
+        
         $("#register_link").click(function (e) {
             e.preventDefault();
             $("#Login_modal").modal("hide");
             $("#Register_modal").modal("show");
         });
+       
         $("#creeaza_cont").click(function (e) {
             e.preventDefault();
             $('#form_errors').empty();
@@ -253,7 +255,7 @@
             }
             if (pass.length < 6) {
                 $("#register_parola").css({'background-color': '#fb9678', 'color': 'white'});
-                $('#form_errors').append('<p>Minim 6 caractere!</p>').removeClass('hidden');
+                $('#form_errors').append('<p>Parola trebuie sa contina minim 6 caractere!</p>').removeClass('hidden');
             }
             if (repass.length === 0) {
                 $("#register_reparola").css({'background-color': '#fb9678', 'color': 'white'});
@@ -298,6 +300,12 @@
             var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             return regex.test(email);
         }
+        
+        $("#signin").click(function (e) {
+            e.preventDefault();
+            var email = $("#login_email").val();
+            var pass = $("#login_parola").val();
+        })
 
     });
 </script>
