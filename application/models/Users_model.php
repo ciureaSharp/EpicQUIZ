@@ -30,11 +30,10 @@ Class Users_model extends CI_Model
 
 // Read data using username and password
     public function login($email, $pass) {
-
-        $condition = "email =" . "'" . $email . "' AND " . "password =" . "'" . md5($_POST['pass'] . SALT) . "'";
         $this->db->select('*');
         $this->db->from('users');
-        $this->db->where($condition);
+        $this->db->where('email', $email);
+        $this->db->where('pass', $pass);
         $this->db->limit(1);
         $query = $this->db->get();
         if ($query->num_rows() == 1) {

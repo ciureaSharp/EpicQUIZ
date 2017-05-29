@@ -305,7 +305,31 @@
             e.preventDefault();
             var email = $("#login_email").val();
             var pass = $("#login_parola").val();
-        })
+            $.ajax({
+               url: "<?php echo base_url()?>login",
+               type: "POST",
+                data: {
+                    email: email,
+                    pass: pass
+                },
+                success: function(data){
+                    if (data == 1){
+                        swal (
+                            'OK!',
+                            'Logare realizata cu success',
+                            'success'
+                        );
+                    } else if (data == 0){
+                        sqal(
+                            'Eroare!',
+                            'Adresa de email/parola incorecte',
+                            'error'
+                        );
+                    }
+                }
+
+            });
+        });
 
     });
 </script>

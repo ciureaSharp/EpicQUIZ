@@ -27,8 +27,8 @@ class Users extends CI_Controller
     }
     public function login()
     {
-        $email = $_POST['email'];
-        $pass = md5($_POST['pass'] . SALT);
+        $email = $_POST['login_email'];
+        $pass = md5($_POST['login_pass'] . SALT);
         $this->load->model('User_model');
         if ($this->Users_model->login($email, $pass)){
             echo 1;
