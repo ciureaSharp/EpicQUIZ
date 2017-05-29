@@ -305,7 +305,6 @@
             e.preventDefault();
             var email = $("#login_email").val();
             var pass = $("#login_parola").val();
-            alert(email);
             $.ajax({
                 url: "<?php echo base_url()?>login",
                 type: "POST",
@@ -328,7 +327,6 @@
                         );
                     }
                 }
-
             });
         });
 
