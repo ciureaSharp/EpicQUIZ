@@ -33,7 +33,7 @@ class Users extends CI_Controller
         if ($this->Users_model->login($email, $pass)){
             echo 1;
         } else {
-            echo 2;
+            echo 0;
         }
     }
 }
