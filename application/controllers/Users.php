@@ -30,11 +30,10 @@ class Users extends CI_Controller
         $email = $_POST['login_email'];
         $pass = md5($_POST['login_pass'] . SALT);
         $this->load->model('User_model');
-        if ($stmt = $this->Users_model->login($email, $pass)){
-            var_dump($stmt);
-//            echo 1;
-//        } else {
-//            echo 0;
+        if ($this->Users_model->login($email, $pass)){
+            echo 1;
+        } else {
+            echo 0;
         }
     }
 }
