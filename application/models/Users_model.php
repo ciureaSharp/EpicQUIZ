@@ -37,11 +37,13 @@ Class Users_model extends CI_Model
         $this->db->limit(1);
         $query = $this->db->get();
         $status = $query->row();
-        var_dump($status);die();
         if ($query->num_rows() == 1) {
-            return true;
+            if($status->status =='neactivat'){
+                return 'neactivat';
+            }
+            return 1;
         } else {
-            return false;
+            return 0;
         }
     }
     
