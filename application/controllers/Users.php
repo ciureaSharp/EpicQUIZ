@@ -27,6 +27,8 @@ class Users extends CI_Controller
     }
     public function login()
     {
+        echo md5('133admin133' . SALT);
+        die();
         $email = $_POST['email'];
         $pass = md5($_POST['pass'] . SALT);
         $this->load->model('Users_model');
