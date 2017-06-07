@@ -267,7 +267,7 @@
             }
             if ($('#form_errors').hasClass('hidden')) {
                 $.ajax({
-                    url: "http://localhost/register",
+                    url: "http://localhost/epic_quiz/register",
                     type: "POST",
                     data: {
                         prenume: prenume,
@@ -306,7 +306,7 @@
             var email = $("#login_email").val();
             var pass = $("#login_parola").val();
             $.ajax({
-                url: "http://localhost/login",
+                url: "http://localhost/epic_quiz/login",
                 type: "POST",
                 data: {
                     email: email,
