@@ -325,6 +325,8 @@
                             'Adresa de email/parola incorecte',
                             'error'
                         );
+                    }else if (data ==3){
+                        swal('Ai primit un email pt. a-ti activa contul!')
                     }
                 }
             });

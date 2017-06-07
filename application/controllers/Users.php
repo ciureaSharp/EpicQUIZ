@@ -18,19 +18,22 @@ class Users extends CI_Controller
         $pass = md5($_POST['pass'] . SALT);
         $this->load->model('Users_model');
         $ret = $this->Users_model->register($email, $pass);
-        if ($ret) {
+        if ($ret == '1') {
             //create session, add session data
             echo 1;
-        } else {
+        } elseif ($ret == 0) {
             echo 0;
+        } elseif ($ret == 'neactivat') {
+            echo 3;
         }
     }
+
     public function login()
     {
         $email = $_POST['email'];
         $pass = md5($_POST['pass'] . SALT);
         $this->load->model('Users_model');
-        if ($this->Users_model->login($email, $pass)){
+        if ($this->Users_model->login($email, $pass)) {
             echo 1;
         } else {
             echo 0;
