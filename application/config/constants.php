@@ -86,5 +86,5 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 
 
 #--- Assets Path ---
-define('ASSETS', 'https://'.$_SERVER["HTTP_HOST"].'/P2380s8T25Gp19t/assets/');
+define('ASSETS', 'https://'.$_SERVER["HTTP_HOST"].'/assets/');
 define('SALT', "{|^%K2&_3L0Q4&l");
