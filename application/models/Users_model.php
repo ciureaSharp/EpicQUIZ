@@ -29,32 +29,45 @@ Class Users_model extends CI_Model
     }
 
 // Read data using username and password
-    public function login($email, $pass) {
+    public function login($email, $pass)
+    {
         $this->db->select('*');
         $this->db->from('users');
         $this->db->where('email', $email);
         $this->db->where('pass', $pass);
         $this->db->limit(1);
         $query = $this->db->get();
-        $status = $query->row();
+        $ret = $query->row();
         if ($query->num_rows() == 1) {
-            if($status->status =='neactivat'){
-                return 'neactivat';
-            }elseif($status->status =='activ'){
+            if ($ret->status == 'neactivat') {
+                $to = $ret->email;
+                $subject = 'Activare cont EpicQUIZ';
+                $message = 'Aici o sa faca Mihaita un cod ca il strang de gat!';
+                $headers = 'From: boss@epicquiz.com' . "\r\n" .
+                    'Reply-To: boss@epicquiz.com' . "\r\n" .
+                    'X-Mailer: PHP/' . phpversion();
+
+                if (mail($to, $subject, $message, $headers)) {
+                    return 'neactivat';
+                } else {
+                    return 'error';
+                }
+            } elseif ($ret->status == 'activ') {
                 return 'activ';
             }
         } else {
             return 'error';
         }
     }
-    
-    public function validate_register($email){
+
+    public function validate_register($email)
+    {
         $this->db->select('*');
         $this->db->from('users');
         $this->db->where('email', $email);
         $this->db->limit(1);
         $query = $this->db->get();
-        if ($query->num_rows() == 1){
+        if ($query->num_rows() == 1) {
             return true;
         } else {
             return false;
