@@ -18,7 +18,12 @@ class Users extends CI_Controller
         $pass = md5($_POST['pass'] . SALT);
         $this->load->model('Users_model');
         $ret = $this->Users_model->register($email, $pass);
-        echo $ret;
+        if ($ret) {
+            //create session, add session data
+            echo 1;
+        } else {
+            echo 0;
+        }
     }
 
     public function login()
@@ -26,10 +31,6 @@ class Users extends CI_Controller
         $email = $_POST['email'];
         $pass = md5($_POST['pass'] . SALT);
         $this->load->model('Users_model');
-        if ($this->Users_model->login($email, $pass)) {
-            echo 1;
-        } else {
-            echo 0;
-        }
+        echo $this->Users_model->login($email, $pass);
     }
 }
