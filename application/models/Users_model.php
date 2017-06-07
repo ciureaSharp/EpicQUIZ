@@ -40,6 +40,13 @@ Class Users_model extends CI_Model
         $ret = $query->row();
         if ($query->num_rows() == 1) {
             if ($ret->status == 'neactivat') {
+                /*
+                 * metoda generat link activare:
+                 * genereaza un link de tip http://localhost/epic_quiz/verify_cont/md5 de email-time()
+                 * metoda verificat link activare
+                 * decodeaza md5 venit si se uita daca exista user cu acel mail si cu status neactivat si cu time() mai mic de 48 ore
+                 * metoda activare cont, schimba neactivat in activ
+                 */
                 $to = $ret->email;
                 $subject = 'Activare cont EpicQUIZ';
                 $message = 'Aici o sa faca Mihaita un cod ca il strang de gat!';
