@@ -266,6 +266,7 @@
                 $('#form_errors').append('<p>Parolele nu coincid!</p>').removeClass('hidden');
             }
             if ($('#form_errors').hasClass('hidden')) {
+                alert("<?php echo base_url()?>");
                 $.ajax({
                     url: "<?php echo base_url()?>register",
                     type: "POST",
