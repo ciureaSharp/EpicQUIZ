@@ -40,10 +40,11 @@ Class Users_model extends CI_Model
         if ($query->num_rows() == 1) {
             if($status->status =='neactivat'){
                 return 'neactivat';
+            }elseif($status->status =='activ'){
+                return 'activ';
             }
-            return 1;
         } else {
-            return 0;
+            return 'error';
         }
     }
     
