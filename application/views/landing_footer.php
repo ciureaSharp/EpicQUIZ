@@ -326,8 +326,7 @@
                             'error'
                         );
                     } else if (data == 'neactivat') {
-                        alert(data);
-                      //  swal('Ai primit un email pt. a-ti activa contul!');
+                        swal('Ai primit un email pt. a-ti activa contul!');
                     }
                 }
             });
