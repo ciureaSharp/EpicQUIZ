@@ -36,6 +36,8 @@ Class Users_model extends CI_Model
         $this->db->where('pass', $pass);
         $this->db->limit(1);
         $query = $this->db->get();
+        $status = $query->row();
+        var_dump($status);die();
         if ($query->num_rows() == 1) {
             return true;
         } else {
