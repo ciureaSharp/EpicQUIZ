@@ -57,10 +57,10 @@ Class Users_model extends CI_Model
 //                $headers = 'From: boss@epicquiz.com' . "\r\n" .
 //                    'Reply-To: boss@epicquiz.com' . "\r\n" .
 //                    'X-Mailer: PHP/' . phpversion();
-                $file = FCPATH. "assets/links.txt";
-                if(write_file($file, $this->generate_link($ret->email))){
+                $file = FCPATH . "assets/links.txt";
+                if (write_file($file, $this->generate_link($ret->email))) {
                     return 'neactivat';
-                }else{
+                } else {
                     return 'error';
                 }
             } elseif ($ret->status == 'activ') {
@@ -90,10 +90,11 @@ Class Users_model extends CI_Model
         return 'http://' . $_SERVER["HTTP_HOST"] . '/epic_quiz/verify_account/' . base64_encode($email . SALT) . '-' . time();
     }
 
-    public function verify_link($link){
+    public function verify_link($link)
+    {
         $ex = explode("-", $link);
         $mail = base64_decode($ex[0]);
-        $mail = str_replace("{|^%K2&_3L0Q4&l","",$mail);
+        $mail = str_replace("{|^%K2&_3L0Q4&l", "", $mail);
         $time = $ex[1];
         $this->db->select('email');
         $this->db->from('users');
@@ -102,7 +103,7 @@ Class Users_model extends CI_Model
         $query = $this->db->get();
         if ($query->num_rows() == 1) {
             $date1 = new DateTime("today");
-            $date2 = new DateTime(strtotime($time));
+            $date2 = new DateTime(date('Y-m-d', $time));
             return $date2->diff($date1)->format("%a");
         } else {
             return false;
