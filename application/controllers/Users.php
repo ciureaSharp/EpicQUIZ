@@ -34,13 +34,13 @@ class Users extends CI_Controller
         echo $this->Users_model->login($email, $pass);
     }
     
-    public function generate_link(){
-        $this->load->model('Users_model');
-        $ret = $this->Users_model->generate_link($email);
-        if($ret){
-            echo true;
-        } else {
-           echo false;
-        }
-    }
+//    public function generate_link(){
+//        $this->load->model('Users_model');
+//        $ret = $this->Users_model->generate_link($email);
+//        if($ret){
+//            echo true;
+//        } else {
+//           echo false;
+//        }
+//    }
 }

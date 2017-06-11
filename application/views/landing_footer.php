@@ -313,21 +313,22 @@
                     pass: pass
                 },
                 success: function (data) {
-                    if (data == 'activ') {
-                        swal(
-                            'OK!',
-                            'Logare realizata cu success',
-                            'success'
-                        );
-                    } else if (data == 'error') {
-                        swal(
-                            'Eroare!',
-                            'Adresa de email/parola incorecte',
-                            'error'
-                        );
-                    } else if (data == 'neactivat') {
-                        swal('Ai primit un email pt. a-ti activa contul!');
-                    }
+                    alert(data);
+//                    if (data == 'activ') {
+//                        swal(
+//                            'OK!',
+//                            'Logare realizata cu success',
+//                            'success'
+//                        );
+//                    } else if (data == 'error') {
+//                        swal(
+//                            'Eroare!',
+//                            'Adresa de email/parola incorecte',
+//                            'error'
+//                        );
+//                    } else if (data == 'neactivat') {
+//                        swal('Ai primit un email pt. a-ti activa contul!');
+//                    }
                 }
             });
         });

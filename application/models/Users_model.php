@@ -58,12 +58,13 @@ Class Users_model extends CI_Model
 //                    'Reply-To: boss@epicquiz.com' . "\r\n" .
 //                    'X-Mailer: PHP/' . phpversion();
                 $save =$this->save_link($this->generate_link($ret->email));
+                return $save;
 
-                if ($save) {
-                    return 'neactivat';
-                } else {
-                    return $save;
-                }
+//                if ($save) {
+//                    return 'neactivat';
+//                } else {
+//                    return $save;
+//                }
             } elseif ($ret->status == 'activ') {
                 return 'activ';
             }
