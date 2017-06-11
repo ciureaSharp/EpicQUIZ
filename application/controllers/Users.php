@@ -45,7 +45,12 @@ class Users extends CI_Controller
             $this->load->view("menus/landing_menu", $data);
             $this->load->view("landing_footer", $data);
         } else{
-            echo 'error';
+            $page_title = 'EpicQUIZ | Acasa';
+            $data['page_title'] = $page_title;
+            $data['modal'] = 'error';
+            $this->load->view("landing_header", $data);
+            $this->load->view("menus/landing_menu", $data);
+            $this->load->view("landing_footer", $data);
         }
     }
 }

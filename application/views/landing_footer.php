@@ -339,15 +339,12 @@
                 text: 'Contul a fost activat',
                 timer: 3000
             });
-//                .then(
-//                function () {},
-//                // handling the promise rejection
-//                function (dismiss) {
-//                    if (dismiss === 'timer') {
-//                        console.log('I was closed by the timer')
-//                    }
-//                }
-//            )
+        }else if(conf_modal == 'error'){
+            swal(
+                'Eroare!',
+                'Contul nu a fost activat!',
+                'error'
+            );
         }
     });
 </script>
