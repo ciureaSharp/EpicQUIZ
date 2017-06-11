@@ -5,7 +5,7 @@
  * Date: 27.05.2017
  * Time: 18:14
  */
-var_dump($modal);
+
 ?>
 
 <div class="modal fade" id="Login_modal" tabindex="-1" role="dialog" aria-labelledby="Login_modalLabel1">
@@ -333,7 +333,9 @@ var_dump($modal);
             });
         });
         var conf_modal = '<?php echo $modal?>';
-        alert(conf_modal);
+        if(conf_modal == 'show'){
+            alert(conf_modal);
+        }
     });
 </script>
 

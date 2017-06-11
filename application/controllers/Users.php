@@ -38,7 +38,7 @@ class Users extends CI_Controller
         $this->load->model('Users_model');
         $ret = $this->Users_model->verify_link($link);
         if($ret == 'ok'){
-            $data['modal'] = true;
+            $data['modal'] = 'show';
             $this->load->view("landing_header", $data);
             $this->load->view("menus/landing_menu", $data);
             $this->load->view("landing_footer", $data);
