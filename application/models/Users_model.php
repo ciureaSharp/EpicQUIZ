@@ -42,14 +42,17 @@ Class Users_model extends CI_Model
             if ($ret->status == 'neactivat') {
                 /*
                  * metoda generat link activare:
-                 * genereaza un link de tip http://localhost/epic_quiz/verify_cont/md5 de email-time()
+                 * genereaza un link de tip http://localhost/epic_quiz/verify_account/md5 de email-time()
                  * metoda verificat link activare
                  * decodeaza md5 venit si se uita daca exista user cu acel mail si cu status neactivat si cu time() mai mic de 48 ore
                  * metoda activare cont, schimba neactivat in activ
                  */
                 $to = $ret->email;
                 $subject = 'Activare cont EpicQUIZ';
-                $message = 'Aici o sa faca Mihaita un cod ca il strang de gat!';
+                $message = 'Va multumim pentru inregistrare!
+                            Contul dumneavoastra a fost creeat.
+                            Accesati link-ul de mai jos pentru activarea contului:
+                            -------------------';
                 $headers = 'From: boss@epicquiz.com' . "\r\n" .
                     'Reply-To: boss@epicquiz.com' . "\r\n" .
                     'X-Mailer: PHP/' . phpversion();
@@ -80,9 +83,9 @@ Class Users_model extends CI_Model
             return false;
         }
     }
-
-    public function generate_link(){
-        
+    
+    public function generate_link($email){
+        return WORKING_FOLDER . "verify_account/" . md5($email) . " - " . time();
     }
 }
 

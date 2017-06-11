@@ -88,3 +88,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 #--- Assets Path ---
 define('ASSETS', 'http://'.$_SERVER["HTTP_HOST"].'/epic_quiz/assets/');
 define('SALT', "{|^%K2&_3L0Q4&l");
+define('WORKING_FOLDER', base_url() . '/epic_quiz/');
