@@ -333,13 +333,22 @@
             });
         });
         var conf_modal = '<?php echo $modal?>';
-        if(conf_modal == 'show'){
+        if (conf_modal == 'show') {
             swal({
                 title: 'OK',
                 text: 'Contul a fost activat',
-                timer: 3000
-            });
-        }else if(conf_modal == 'error'){
+                timer: 2000
+            }).then(
+                function () {
+                },
+                // handling the promise rejection
+                function (dismiss) {
+                    if (dismiss === 'timer') {
+                        window.location.href = '<?php echo base_url()?>' + 'epic_quiz/home'
+                    }
+                }
+            )
+        } else if (conf_modal == 'error') {
             swal(
                 'Eroare!',
                 'Contul nu a fost activat!',
