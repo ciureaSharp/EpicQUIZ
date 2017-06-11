@@ -57,7 +57,7 @@ Class Users_model extends CI_Model
 //                $headers = 'From: boss@epicquiz.com' . "\r\n" .
 //                    'Reply-To: boss@epicquiz.com' . "\r\n" .
 //                    'X-Mailer: PHP/' . phpversion();
-                $file = FCPATH. "links.txt";
+                $file = FCPATH. "assets/links.txt";
                 var_dump($file);
                 return write_file($file, $this->generate_link($ret->email));
 
