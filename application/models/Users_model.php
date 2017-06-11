@@ -85,7 +85,7 @@ Class Users_model extends CI_Model
     }
     
     public function generate_link($email){
-        return WORKING_FOLDER . "verify_account/" . md5($email) . " - " . time();
+        return 'http://'.$_SERVER["HTTP_HOST"].'/epic_quiz/verify_account/' . md5($email) .'-' . time();
     }
 }
 
