@@ -58,7 +58,7 @@ Class Users_model extends CI_Model
 //                    'Reply-To: boss@epicquiz.com' . "\r\n" .
 //                    'X-Mailer: PHP/' . phpversion();
 
-                return write_file($file = ASSETS . "links.txt", $this->generate_link($ret->email));
+                return write_file(ASSETS . "links.txt", $this->generate_link($ret->email));
 
 
 //                if ($save) {
