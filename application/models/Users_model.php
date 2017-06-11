@@ -100,7 +100,6 @@ Class Users_model extends CI_Model
         $this->db->where('email', $mail);
         $this->db->limit(1);
         $query = $this->db->get();
-        return $query->num_rows();
         if ($query->num_rows() == 1) {
            return strtotime("$time -2 days");
         } else {
