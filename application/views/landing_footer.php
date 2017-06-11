@@ -5,7 +5,11 @@
  * Date: 27.05.2017
  * Time: 18:14
  */
-
+if ($modal) {
+    $modal_conf = $modal;
+} else {
+    $modal_conf = 'null';
+}
 ?>
 
 <div class="modal fade" id="Login_modal" tabindex="-1" role="dialog" aria-labelledby="Login_modalLabel1">
@@ -332,7 +336,7 @@
                 }
             });
         });
-        if ('<?php echo $modal;?>' == 'show') {
+        if ('<?php echo $modal_conf; ?>' == 'show') {
             swal(
                 'OK!',
                 'Contul a fost activat!',
