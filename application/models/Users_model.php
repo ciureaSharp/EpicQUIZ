@@ -102,7 +102,7 @@ Class Users_model extends CI_Model
         $this->db->limit(1);
         $query = $this->db->get();
         if ($query->num_rows() == 1) {
-            return date('Y-m-d', strtotime('-5 days', time()));
+            return strtotime('-2 days', $time);
         } else {
             return false;
         }
