@@ -99,6 +99,7 @@ Class Users_model extends CI_Model
         $this->db->select('email');
         $this->db->from('users');
         $this->db->where('email', $mail);
+        $this->db->where('status', 'neactivat');
         $this->db->limit(1);
         $query = $this->db->get();
         if ($query->num_rows() == 1) {
