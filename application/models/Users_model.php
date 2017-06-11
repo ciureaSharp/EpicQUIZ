@@ -103,7 +103,11 @@ Class Users_model extends CI_Model
         $query = $this->db->get();
         if ($query->num_rows() == 1) {
             if ($time >= strtotime('-2 days', time())) {
-                return 'ok';
+                $data = array(
+                    'status' => 'activ'
+                );
+                $this->db->where('email', $mail);
+                $this->db->update('users', $data);
             } else {
                 return 'link invalid';
             }
