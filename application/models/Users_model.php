@@ -91,7 +91,7 @@ Class Users_model extends CI_Model
 
     public function save_link($link){
         $file = ASSETS . "links.txt";
-
+        $this->load->helper('file');
         if ( ! write_file($file, $link))
         {
             return false;
