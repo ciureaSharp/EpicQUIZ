@@ -5,7 +5,7 @@
  * Date: 27.05.2017
  * Time: 18:14
  */
-if (!$modal) {
+if (!isset($modal)) {
     $modal = 'null';
 }
 ?>
