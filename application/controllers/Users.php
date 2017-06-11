@@ -37,10 +37,13 @@ class Users extends CI_Controller
     public function verify_link($link){
         $this->load->model('Users_model');
         $ret = $this->Users_model->verify_link($link);
-      //  if($ret){
-            var_dump($ret);
-//        } else{
-//            echo 'error';
-//        }
+        if($ret == 'ok'){
+            $data['modal'] = true;
+            $this->load->view("landing_header", $data);
+            $this->load->view("menus/landing_menu", $data);
+            $this->load->view("landing_footer", $data);
+        } else{
+            echo 'error';
+        }
     }
 }
