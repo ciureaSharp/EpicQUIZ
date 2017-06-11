@@ -94,7 +94,7 @@ Class Users_model extends CI_Model
         $ex = explode("-", $link);
         $mail = base64_decode($ex[0]);
         $time = $ex[1];
-
+return $mail;
         $this->db->select('email');
         $this->db->from('users');
         $this->db->where('email', $mail);
