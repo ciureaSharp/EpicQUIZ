@@ -102,7 +102,11 @@ Class Users_model extends CI_Model
         $this->db->limit(1);
         $query = $this->db->get();
         if ($query->num_rows() == 1) {
-            return strtotime('-2 days', $time);
+            if ($time >= strtotime('-2 days', time())) {
+                return 'ok';
+            } else {
+                return 'link invalid';
+            }
         } else {
             return false;
         }
