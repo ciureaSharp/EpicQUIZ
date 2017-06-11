@@ -334,20 +334,15 @@
         });
         var conf_modal = '<?php echo $modal?>';
         if (conf_modal == 'show') {
-            swal({
-                title: 'OK',
-                text: 'Contul a fost activat',
-                timer: 2000
-            }).then(
-                function () {
-                },
-                // handling the promise rejection
-                function (dismiss) {
-                    if (dismiss === 'timer') {
-                        window.location.href = '<?php echo base_url()?>' + 'epic_quiz/home'
-                    }
-                }
-            )
+            window.setTimeout(function() {
+                swal(
+                    'OK!',
+                    'Contul a fost activat!',
+                    'success'
+                );
+                window.location.href = 'http://www.google.com';
+            }, 3000);
+
         } else if (conf_modal == 'error') {
             swal(
                 'Eroare!',
