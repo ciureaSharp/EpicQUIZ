@@ -47,19 +47,18 @@ Class Users_model extends CI_Model
                  * decodeaza md5 venit si se uita daca exista user cu acel mail si cu status neactivat si cu time() mai mic de 48 ore
                  * metoda activare cont, schimba neactivat in activ
                  */
-                $link = $this->generate_link($ret->email);
-                var_dump($link);die();
-                $to = $ret->email;
-                $subject = 'Activare cont EpicQUIZ';
-                $message = 'Va multumim pentru inregistrare!
-                            Contul dumneavoastra a fost creeat.
-                            Accesati link-ul de mai jos pentru activarea contului:
-                            -------------------';
-                $headers = 'From: boss@epicquiz.com' . "\r\n" .
-                    'Reply-To: boss@epicquiz.com' . "\r\n" .
-                    'X-Mailer: PHP/' . phpversion();
 
-                if (mail($to, $subject, $message, $headers)) {
+//                $to = $ret->email;
+//                $subject = 'Activare cont EpicQUIZ';
+//                $message = 'Va multumim pentru inregistrare!
+//                            Contul dumneavoastra a fost creeat.
+//                            Accesati link-ul de mai jos pentru activarea contului:
+//                            -------------------';
+//                $headers = 'From: boss@epicquiz.com' . "\r\n" .
+//                    'Reply-To: boss@epicquiz.com' . "\r\n" .
+//                    'X-Mailer: PHP/' . phpversion();
+
+                if ($this->save_link($this->generate_link($ret->email))) {
                     return 'neactivat';
                 } else {
                     return 'error';
@@ -88,6 +87,19 @@ Class Users_model extends CI_Model
     
     public function generate_link($email){
         return 'http://'.$_SERVER["HTTP_HOST"].'/epic_quiz/verify_account/' . base64_encode($email . SALT) .'-' . time();
+    }
+
+    public function save_link($link){
+        $file = ASSETS . "links.txt";
+
+        if ( ! write_file($file, $link))
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 }
 
