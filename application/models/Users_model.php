@@ -58,15 +58,11 @@ Class Users_model extends CI_Model
 //                    'Reply-To: boss@epicquiz.com' . "\r\n" .
 //                    'X-Mailer: PHP/' . phpversion();
                 $file = FCPATH. "assets/links.txt";
-                var_dump($file);
-                return write_file($file, $this->generate_link($ret->email));
-
-
-//                if ($save) {
-//                    return 'neactivat';
-//                } else {
-//                    return $save;
-//                }
+                if(write_file($file, $this->generate_link($ret->email))){
+                    return 'neactivat';
+                }else{
+                    return 'error';
+                }
             } elseif ($ret->status == 'activ') {
                 return 'activ';
             }
