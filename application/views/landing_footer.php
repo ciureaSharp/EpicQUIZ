@@ -5,7 +5,7 @@
  * Date: 27.05.2017
  * Time: 18:14
  */
-$activare_cont = $modal;
+var_dump($modal);
 ?>
 
 <div class="modal fade" id="Login_modal" tabindex="-1" role="dialog" aria-labelledby="Login_modalLabel1">
