@@ -101,7 +101,9 @@ Class Users_model extends CI_Model
         $this->db->limit(1);
         $query = $this->db->get();
         if ($query->num_rows() == 1) {
-           return $time;
+            $date1 = new DateTime("today");
+            $date2 = new DateTime($time);
+            return $date2->diff($date1)->format("%a");
         } else {
             return false;
         }
