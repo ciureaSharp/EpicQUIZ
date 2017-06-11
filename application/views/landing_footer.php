@@ -334,7 +334,20 @@
         });
         var conf_modal = '<?php echo $modal?>';
         if(conf_modal == 'show'){
-            alert(conf_modal);
+            swal({
+                title: 'OK',
+                text: 'Contul a fost activat',
+                timer: 2000
+            });
+//                .then(
+//                function () {},
+//                // handling the promise rejection
+//                function (dismiss) {
+//                    if (dismiss === 'timer') {
+//                        console.log('I was closed by the timer')
+//                    }
+//                }
+//            )
         }
     });
 </script>
