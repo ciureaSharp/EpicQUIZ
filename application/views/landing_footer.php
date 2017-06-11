@@ -332,7 +332,7 @@
                 }
             });
         });
-        if ('<?php echo $modal?>' == 'show') {
+        if ('<?php echo $modal;?>' == 'show') {
             swal(
                 'OK!',
                 'Contul a fost activat!',
