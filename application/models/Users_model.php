@@ -93,9 +93,8 @@ Class Users_model extends CI_Model
     public function verify_link($link){
         $ex = explode("-", $link);
         $mail = base64_decode($ex[0]);
-        $m = str_replace("{|^%K2&_3L0Q4&l","",$mail);
+        $mail = str_replace("{|^%K2&_3L0Q4&l","",$mail);
         $time = $ex[1];
-return $m;
         $this->db->select('email');
         $this->db->from('users');
         $this->db->where('email', $mail);
