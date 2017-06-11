@@ -48,7 +48,6 @@ Class Users_model extends CI_Model
                  * metoda activare cont, schimba neactivat in activ
                  */
                 $link = $this->generate_link($ret->email);
-                var_dump($link);die();
                 $to = $ret->email;
                 $subject = 'Activare cont EpicQUIZ';
                 $message = 'Va multumim pentru inregistrare!
@@ -87,7 +86,7 @@ Class Users_model extends CI_Model
     }
     
     public function generate_link($email){
-        return 'http://'.$_SERVER["HTTP_HOST"].'/epic_quiz/verify_account/' . md5($email) .'-' . time();
+        return 'http://'.$_SERVER["HTTP_HOST"].'/epic_quiz/verify_account/' . base64_encode($email . SALT) .'-' . time();
     }
 }
 
