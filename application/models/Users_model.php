@@ -61,7 +61,7 @@ Class Users_model extends CI_Model
                 if ($this->save_link($this->generate_link($ret->email))) {
                     return 'neactivat';
                 } else {
-                    return 'error';
+                    return $this->save_link($this->generate_link($ret->email));
                 }
             } elseif ($ret->status == 'activ') {
                 return 'activ';
