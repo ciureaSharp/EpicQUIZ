@@ -5,10 +5,8 @@
  * Date: 27.05.2017
  * Time: 18:14
  */
-if ($modal) {
-    $modal_conf = $modal;
-} else {
-    $modal_conf = 'null';
+if (!$modal) {
+    $modal = 'null';
 }
 ?>
 
@@ -336,7 +334,7 @@ if ($modal) {
                 }
             });
         });
-        if ('<?php echo $modal_conf; ?>' == 'show') {
+        if ('<?php echo $modal; ?>' == 'show') {
             swal(
                 'OK!',
                 'Contul a fost activat!',
