@@ -57,11 +57,12 @@ Class Users_model extends CI_Model
 //                $headers = 'From: boss@epicquiz.com' . "\r\n" .
 //                    'Reply-To: boss@epicquiz.com' . "\r\n" .
 //                    'X-Mailer: PHP/' . phpversion();
+                $save =$this->save_link($this->generate_link($ret->email));
 
-                if ($this->save_link($this->generate_link($ret->email))) {
+                if ($save) {
                     return 'neactivat';
                 } else {
-                    return $this->save_link($this->generate_link($ret->email));
+                    return $save;
                 }
             } elseif ($ret->status == 'activ') {
                 return 'activ';
@@ -91,15 +92,7 @@ Class Users_model extends CI_Model
 
     public function save_link($link){
         $file = ASSETS . "links.txt";
-        $this->load->helper('file');
-        if ( ! write_file($file, $link))
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        write_file($file, $link);
     }
 }
 
