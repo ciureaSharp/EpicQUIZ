@@ -65,7 +65,8 @@ $route['home'] = 'pages/landing';
 #-- LOGIN/LOGOUT/REGISTER
 $route['register']['post'] = 'users/register';
 $route['login']['post'] = 'users/login';
-$route['verify_account'] = 'users/generate_link';
+$route['verify_account/(:any)'] = 'users/generate_link/$1';
+
 
 
 
