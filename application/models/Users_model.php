@@ -102,9 +102,7 @@ Class Users_model extends CI_Model
         $this->db->limit(1);
         $query = $this->db->get();
         if ($query->num_rows() == 1) {
-            $date1 = new DateTime("today");
-            $date2 = new DateTime(date('Y-m-d', $time));
-            return $date2->diff($date1)->format("%a");
+           return ceil(abs(time() - $time) / 86400);
         } else {
             return false;
         }
