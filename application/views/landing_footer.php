@@ -337,7 +337,7 @@
             swal({
                 title: 'OK',
                 text: 'Contul a fost activat',
-                timer: 2000
+                timer: 3000
             });
 //                .then(
 //                function () {},
