@@ -48,6 +48,7 @@ Class Users_model extends CI_Model
                  * metoda activare cont, schimba neactivat in activ
                  */
                 $link = $this->generate_link($ret->email);
+                var_dump($link);die();
                 $to = $ret->email;
                 $subject = 'Activare cont EpicQUIZ';
                 $message = 'Va multumim pentru inregistrare!
