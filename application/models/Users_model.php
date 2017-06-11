@@ -108,6 +108,7 @@ Class Users_model extends CI_Model
                 );
                 $this->db->where('email', $mail);
                 $this->db->update('users', $data);
+                return 'ok';
             } else {
                 return 'link invalid';
             }
@@ -115,7 +116,6 @@ Class Users_model extends CI_Model
             return false;
         }
     }
-
 }
 
 
