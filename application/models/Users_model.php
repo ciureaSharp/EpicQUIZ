@@ -47,6 +47,8 @@ Class Users_model extends CI_Model
                  * decodeaza md5 venit si se uita daca exista user cu acel mail si cu status neactivat si cu time() mai mic de 48 ore
                  * metoda activare cont, schimba neactivat in activ
                  */
+                $link = $this->generate_link($ret->email);
+                var_dump($link);die();
                 $to = $ret->email;
                 $subject = 'Activare cont EpicQUIZ';
                 $message = 'Va multumim pentru inregistrare!
