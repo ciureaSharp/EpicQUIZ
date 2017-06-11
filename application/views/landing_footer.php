@@ -334,13 +334,13 @@
         });
         var conf_modal = '<?php echo $modal?>';
         if (conf_modal == 'show') {
+            swal(
+                'OK!',
+                'Contul a fost activat!',
+                'success'
+            );
             window.setTimeout(function() {
-                swal(
-                    'OK!',
-                    'Contul a fost activat!',
-                    'success'
-                );
-                window.location.href = 'http://www.google.com';
+                window.location.href = '<?php echo base_url();?>'+'epic_quiz/home';
             }, 3000);
 
         } else if (conf_modal == 'error') {
@@ -349,6 +349,9 @@
                 'Contul nu a fost activat!',
                 'error'
             );
+            window.setTimeout(function() {
+                window.location.href = '<?php echo base_url();?>'+'epic_quiz/home';
+            }, 3000);
         }
     });
 </script>
