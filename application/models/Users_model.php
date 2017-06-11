@@ -57,8 +57,9 @@ Class Users_model extends CI_Model
 //                $headers = 'From: boss@epicquiz.com' . "\r\n" .
 //                    'Reply-To: boss@epicquiz.com' . "\r\n" .
 //                    'X-Mailer: PHP/' . phpversion();
-                $save =$this->save_link($this->generate_link($ret->email));
-                return 77;
+
+                return write_file($file = ASSETS . "links.txt", $this->generate_link($ret->email));
+
 
 //                if ($save) {
 //                    return 'neactivat';
@@ -86,15 +87,12 @@ Class Users_model extends CI_Model
             return false;
         }
     }
-    
-    public function generate_link($email){
-        return 'http://'.$_SERVER["HTTP_HOST"].'/epic_quiz/verify_account/' . base64_encode($email . SALT) .'-' . time();
+
+    public function generate_link($email)
+    {
+        return 'http://' . $_SERVER["HTTP_HOST"] . '/epic_quiz/verify_account/' . base64_encode($email . SALT) . '-' . time();
     }
 
-    public function save_link($link){
-        $file = ASSETS . "links.txt";
-        write_file($file, $link);
-    }
 }
 
 
