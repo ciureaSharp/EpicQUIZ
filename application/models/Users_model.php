@@ -90,6 +90,23 @@ Class Users_model extends CI_Model
         return 'http://' . $_SERVER["HTTP_HOST"] . '/epic_quiz/verify_account/' . base64_encode($email . SALT) . '-' . time();
     }
 
+    public function verify_link($link){
+        $ex = explode("-", $link);
+        $mail = base64_decode($ex[0]);
+        $time = $ex[1];
+
+        $this->db->select('email');
+        $this->db->from('users');
+        $this->db->where('email', $mail);
+        $this->db->limit(1);
+        $query = $this->db->get();
+        if ($query->num_rows() == 1) {
+           return strtotime("$time -2 days");
+        } else {
+            return false;
+        }
+    }
+
 }
 
 
